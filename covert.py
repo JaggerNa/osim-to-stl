@@ -2,7 +2,7 @@ import opensim as osim
 import vtk
 
 def get_bone_geometry_file(model, bone_name):
-    # get bone
+    # get bones from .osim file
     body = model.getBodySet().get(bone_name)
     geom = body.get_attached_geometry(0)
     mesh = osim.Mesh.safeDownCast(geom)
